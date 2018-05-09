@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.security.kerberos.client.KerberosRestTemplate;
 import org.springframework.util.StringUtils;
@@ -14,7 +13,7 @@ import com.qumu.kerberos.client.httpclient.ServiceNameType;
 import com.qumu.kerberos.client.resttemplate.CustomKerberosRestTemplate;
 
 @SpringBootApplication
-@EnableAutoConfiguration(exclude = SecurityAutoConfiguration.class)
+@EnableAutoConfiguration
 public class Application implements CommandLineRunner {
 
 	@Value("${app.user-principal}")
